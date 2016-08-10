@@ -108,3 +108,6 @@ curl -s -L https://data.services.jetbrains.com/products/download?code=PS&platfor
 sudo mv phpstorm_installer.tar.gz /opt
 sudo tar -xfz phpstorm_installer.tar.gz
 sudo rm -f phpstorm_installer.tar.gz
+
+source ~/.profile
+source ~/.bashrc
