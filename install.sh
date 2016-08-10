@@ -51,16 +51,16 @@ sudo apt-get install imagemagick -y
 sudo apt-get intall curl -y
 
 #git
-sudo apt-get install git
+sudo apt-get install git -y
 
 #google chrome
-sudo apt-get install 	google-chrome-stable
+sudo apt-get install 	google-chrome-stable -y
 
 #firefox
-sudo apt-get install firefox
+sudo apt-get install firefox -y
 
 #spotify
-sudo apt-get install spotify-client
+sudo apt-get install spotify-client -y
 
 
 
@@ -85,13 +85,13 @@ nvm use 4.4.7
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 # PHP #
-sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
+sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql -y
 
 
 # Servers #
 
 #apache
-sudo apt-get install apache2
+sudo apt-get install apache2 -y
 #mysql
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password '
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again '
