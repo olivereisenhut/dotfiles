@@ -3,7 +3,8 @@
 echo "Starting installation"
 
 #add repositories
-sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+#jdk
+sudo add-apt-repository ppa:openjdk-r/ppa
 #spotify
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 #chrome
