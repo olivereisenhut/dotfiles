@@ -103,12 +103,26 @@ sudo apt-get install mysql-server -y
 #Atom
 curl -s -L https://atom.io/download/deb -o atom_installer.deb
 sudo dpkg -i atom_installer.deb
+sudo rm -f atom_installer
+
+
 
 #Phpstorm
-curl -s -L https://data.services.jetbrains.com/products/download?code=PS&platform=linux -o phpstorm_installer.tar.gz
+curl -s -L https://download.jetbrains.com/webide/PhpStorm-2016.2.1.tar.gz -o phpstorm_installer.tar.gz
 sudo mv phpstorm_installer.tar.gz /opt
-sudo tar -xfz phpstorm_installer.tar.gz
+cd /opt
+sudo tar xfz phpstorm_installer.tar.gz
 sudo rm -f phpstorm_installer.tar.gz
+cd ~/Downloads
+
+#IntelliJ community
+curl -s -L https://download.jetbrains.com/idea/ideaIC-2016.2.3.tar.gz -o intelliJ.tar.gz
+sudo mv intelliJ.tar.gz /opt
+cd /opt
+sudo tar xfz intelliJ.tar.gz
+sudo rm -f intelliJ.tar.gz
+cd ~/Downloads
+
 
 source ~/.profile
 source ~/.bashrc
