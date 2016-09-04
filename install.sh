@@ -1,5 +1,7 @@
 #!/bin/sh
 
+SCRIPTPATH=`pwd -P`
+
 echo "Starting installation"
 
 #add repositories
@@ -73,7 +75,7 @@ sudo apt-get install spotify-client -y
 
 #nvm => https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
-bash install_nvm.sh
+sudo -u "$(whoami)" bash install_nvm.sh
 source ~/.profile
 
 #install lts verison
@@ -149,5 +151,6 @@ function installAtomPackages() {
 }
 
 function installDotFiles() {
-  cd
+  cd $SCRIPTPATH
+  cp ./.* ~/.
 }
