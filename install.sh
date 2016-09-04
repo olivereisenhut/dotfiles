@@ -123,6 +123,31 @@ sudo tar xfz intelliJ.tar.gz
 sudo rm -f intelliJ.tar.gz
 cd ~/Downloads
 
+#change terminal colors
+wget -O xt  http://git.io/v3D8e && chmod +x xt && ./xt && rm xt
 
 source ~/.profile
 source ~/.bashrc
+
+#subscripts
+installAtomPackages
+installDotFiles
+
+
+function installAtomPackages() {
+  #beautify
+  apm install atom-beautify
+  apm install pigments
+
+
+
+  #linters & co
+  apm install linter
+  apm install linter-eslint
+  apm install linter-stylelint
+
+}
+
+function installDotFiles() {
+  cd
+}
