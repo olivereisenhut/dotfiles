@@ -140,8 +140,11 @@ function installAtomPackages() {
   #beautify
   apm install atom-beautify
   apm install pigments
+  apm install react
 
-
+  #themes
+  apm install gruvbox-plus-syntax
+  apm install octocat-syntax
 
   #linters & co
   apm install linter
