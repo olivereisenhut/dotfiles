@@ -125,8 +125,6 @@ sudo tar xfz intelliJ.tar.gz
 sudo rm -f intelliJ.tar.gz
 cd ~/Downloads
 
-#change terminal colors
-wget -O xt  http://git.io/v3D8e && chmod +x xt && ./xt && rm xt
 
 source ~/.profile
 source ~/.bashrc
@@ -134,7 +132,12 @@ source ~/.bashrc
 #subscripts
 installAtomPackages
 installDotFiles
+installElementarySpecificStuff
 
+function installElementarySpecificStuff() {
+  #change terminal colors
+  wget -O xt  http://git.io/v3D8e && chmod +x xt && ./xt && rm xt
+}
 
 function installAtomPackages() {
   #beautify
