@@ -76,7 +76,7 @@ sudo apt-get install spotify-client -y
 #nvm => https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
 sudo -u "$(whoami)" bash install_nvm.sh
-source ~/.profile
+source ~/.bashrc
 
 #install lts verison
 nvm install 4.4.7
