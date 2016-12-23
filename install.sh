@@ -101,7 +101,7 @@ sudo rm -f atom_installer
 
 
 #Phpstorm
-curl -s -L https://download.jetbrains.com/webide/PhpStorm-2016.2.1.tar.gz -o phpstorm_installer.tar.gz
+curl -L https://download-cf.jetbrains.com/webide/PhpStorm-2016.3.2.tar.gz -o phpstorm_installer.tar.gz
 sudo mv phpstorm_installer.tar.gz /opt
 cd /opt
 sudo tar xfz phpstorm_installer.tar.gz
@@ -109,7 +109,7 @@ sudo rm -f phpstorm_installer.tar.gz
 cd ~/Downloads
 
 #IntelliJ community
-curl -s -L https://download.jetbrains.com/idea/ideaIC-2016.2.3.tar.gz -o intelliJ.tar.gz
+curl -L https://download-cf.jetbrains.com/idea/ideaIU-2016.3.1-no-jdk.tar.gz -o intelliJ.tar.gz
 sudo mv intelliJ.tar.gz /opt
 cd /opt
 sudo tar xfz intelliJ.tar.gz
