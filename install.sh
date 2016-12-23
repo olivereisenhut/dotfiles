@@ -87,18 +87,6 @@ nvm use 4.4.7
 #rvm => https://rvm.io/rvm/install
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 
-# PHP #
-sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql -y
-
-
-# Servers #
-
-#apache
-sudo apt-get install apache2 -y
-#mysql
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password '
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again '
-sudo apt-get install mysql-server -y
 
 # Editors and Ides #
 
@@ -106,7 +94,6 @@ sudo apt-get install mysql-server -y
 curl -s -L https://atom.io/download/deb -o atom_installer.deb
 sudo dpkg -i atom_installer.deb
 sudo rm -f atom_installer
-
 
 
 #Phpstorm
