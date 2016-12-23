@@ -66,6 +66,9 @@ sudo apt-get install firefox -y
 #spotify
 sudo apt-get install spotify-client -y
 
+#yarn
+sudo apt-get install yarn -y
+
 
 
 ######################
