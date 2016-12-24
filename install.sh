@@ -121,16 +121,16 @@ source ~/.profile
 source ~/.bashrc
 
 #subscripts
-installAtomPackages
-installDotFiles
-installElementarySpecificStuff
+install_atom_packages
+install_elementary_stuff
+copy_dotfiles
 
-function installElementarySpecificStuff() {
+function install_elementary_stuff() {
   #change terminal colors
   wget -O xt  http://git.io/v3D8e && chmod +x xt && ./xt && rm xt
 }
 
-function installAtomPackages() {
+function install_atom_packages() {
   #beautify
   apm install atom-beautify
   apm install pigments
@@ -147,7 +147,7 @@ function installAtomPackages() {
 
 }
 
-function installDotFiles() {
+function copy_dotfiles() {
   cd $SCRIPTPATH
   cp ./.* ~/.
 }
