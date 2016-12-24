@@ -45,6 +45,9 @@ sudo apt-get install aptitude -y
 #vim
 sudo apt-get install vim -y
 
+#fish shell
+sudo apt-get install fish -y
+
 #openjdk 8
 sudo apt-get install openjdk-8-jdk -y
 
