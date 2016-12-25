@@ -101,7 +101,8 @@ nvm use 4.4.7
 
 #rvm => https://rvm.io/rvm/install
 curl -sSL https://get.rvm.io | bash -s stable --ruby
-
+source ~/.bashrc
+rvm install ruby-2.3.3
 
 # Editors and Ides #
 
