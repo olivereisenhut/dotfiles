@@ -61,7 +61,7 @@ sudo apt-get intall curl -y
 sudo apt-get install git -y
 
 #google chrome
-sudo apt-get install 	google-chrome-stable -y
+sudo apt-get install google-chrome-stable -y
 
 #firefox
 sudo apt-get install firefox -y
@@ -136,6 +136,7 @@ source ~/.bashrc
 install_atom_packages
 install_elementary_stuff
 copy_dotfiles
+install_npm_packages
 
 function install_elementary_stuff() {
   #change terminal colors
@@ -157,6 +158,10 @@ function install_atom_packages() {
   apm install linter-eslint
   apm install linter-stylelint
 
+}
+
+function install_npm_packages() {
+   yarn global add gulp grunt gatsby create-react-app 
 }
 
 function copy_dotfiles() {
