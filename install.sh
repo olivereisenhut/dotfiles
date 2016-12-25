@@ -45,8 +45,8 @@ sudo apt-get install aptitude -y
 #vim
 sudo apt-get install vim -y
 
-#fish shell
-sudo apt-get install fish -y
+#zsh
+sudo apt-get install zsh -y
 
 #openjdk 8
 sudo apt-get install openjdk-8-jdk -y
@@ -72,7 +72,15 @@ sudo apt-get install spotify-client -y
 #yarn
 sudo apt-get install yarn -y
 
+######################
+# Zsh
+######################
 
+#oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# spaceship theme
+curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.sh | zsh
 
 ######################
 # Coding
