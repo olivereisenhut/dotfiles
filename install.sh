@@ -140,7 +140,7 @@ install_npm_packages
 
 function install_elementary_stuff() {
   #change terminal colors
-  wget -O xt  http://git.io/v3D8e && chmod +x xt && ./xt && rm xt
+  wget -O xt  http://git.io/v6JYg && chmod +x xt && ./xt && rm xt
 }
 
 function install_atom_packages() {
