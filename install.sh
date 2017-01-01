@@ -48,6 +48,9 @@ sudo apt-get install vim -y
 #zsh
 sudo apt-get install zsh -y
 
+#tmux
+sudo apt-get install tmux -y
+
 #openjdk 8
 sudo apt-get install openjdk-8-jdk -y
 
