@@ -128,6 +128,8 @@ sudo tar xfz intelliJ.tar.gz
 sudo rm -f intelliJ.tar.gz
 cd ~/Downloads
 
+#Vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 source ~/.profile
 source ~/.bashrc
