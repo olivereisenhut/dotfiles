@@ -166,7 +166,7 @@ function install_npm_packages() {
 
 function copy_dotfiles() {
   cd $SCRIPTPATH
-  cp ./.* ~/.
+  rsync ./.* ~/ --exclude=.git 
 }
 
 #subscripts
