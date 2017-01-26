@@ -137,11 +137,6 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 source ~/.profile
 source ~/.bashrc
 
-#subscripts
-install_atom_packages
-install_elementary_stuff
-copy_dotfiles
-install_npm_packages
 
 function install_elementary_stuff() {
   #change terminal colors
@@ -173,3 +168,9 @@ function copy_dotfiles() {
   cd $SCRIPTPATH
   cp ./.* ~/.
 }
+
+#subscripts
+install_atom_packages
+install_elementary_stuff
+copy_dotfiles
+install_npm_packages
