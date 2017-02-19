@@ -51,6 +51,9 @@ sudo apt-get install zsh -y
 #tmux
 sudo apt-get install tmux -y
 
+#htop
+sudo apt-get install htop -y
+
 #openjdk 8
 sudo apt-get install openjdk-8-jdk -y
 
