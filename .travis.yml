@@ -1,7 +1,0 @@
-language: bash
-
-before_script:
-    - curl -L "https://raw.githubusercontent.com/olivereisenhut/dotfiles/master/install.sh -o install.sh"
-
-script:
-    - bash install.sh
