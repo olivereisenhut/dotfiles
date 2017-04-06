@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPTPATH=`pwd -P`
+SCRIPTPATH=$(pwd -P)
 
 echo "Starting installation"
 
@@ -80,9 +80,9 @@ source ~/.bashrc
 # Jetbrains Toolbox
 
 curl https://download-cf.jetbrains.com/toolbox/jetbrains-toolbox-1.2.2314.tar.gz | tar xvz
-cd jetbrains-toolbox-1.2.2314
+cd "jetbrains-toolbox-1.2.2314"
 ./jetbrains-toolbox
-cd SCRIPTPATH
+cd "$SCRIPTPATH"
 
 # Vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -102,7 +102,7 @@ function install_npm_packages() {
 }
 
 function copy_dotfiles() {
-  cd $SCRIPTPATH
+  cd "$SCRIPTPATH"
   rsync ./.* ~/ --exclude=.git 
 }
 
