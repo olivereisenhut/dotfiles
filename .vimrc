@@ -1,4 +1,7 @@
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'mattn/emmet-vim'
+Plug 'vim-airline/vim-airline'
+call plug#end()
 
 "enable syntax highlighting
 syntax enable
