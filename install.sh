@@ -100,7 +100,6 @@ function install_elementary_stuff() {
 
 function install_npm_packages() {
    npm install -g gulp grunt create-react-app diff-so-fancy
-   git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 }
 
 function copy_dotfiles() {
