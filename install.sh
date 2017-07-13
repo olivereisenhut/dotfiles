@@ -1,13 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
-SCRIPTPATH=`pwd -P`
+SCRIPTPATH=$(pwd -P)
 
 echo "Starting installation"
 
-
 # go to downloads for further installations
 cd ~/Downloads
-
 
 #Install Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -15,33 +13,26 @@ cd ~/Downloads
 #Install Cask
 brew tap caskroom/cask
 
-
 ######################
-# Management Software
+# PACKAGES
 ######################
 
-
-#jkd
-brew cask install java
-
-#wget
+# Brew
 brew install wget
 
-#git
-brew install git
+# Brew Cask
+brew cask install google-chrome firefox spotify iterm2 skype docker docker-tools docker-toolbox sourcetree
 
-#google chrome
-brew cask install google-chrome
 
-#firefox
-brew cask install firefox
+######################
+# Zsh
+######################
 
-#spotify
-brew cask install spotify
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-#iterm2
-brew cask install iterm2
-
+# spaceship theme
+curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.sh | zsh
 
 ######################
 # Coding
@@ -49,53 +40,25 @@ brew cask install iterm2
 
 # NODE JS #
 
-#nvm => https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
-curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+# nvm => https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh -o install_nvm.sh
 sudo -u "$(whoami)" bash install_nvm.sh
+source ~/.bashrc
 source ~/.bash_profile
+source ~/.zshrc
 
 #install lts verison
-nvm install 4.4.7
-nvm use 4.4.7
-
-# RUBY #
-
-#rvm => https://rvm.io/rvm/install
-curl -L https://get.rvm.io | bash -s stable --ruby
-
-
-# PHP #
-brew install php70
-
-brew cask install atom
-brew cask install phpstorm
-brew cask install intellij-idea
+nvm install stable
+nvm use stable
 
 source ~/.profile
 source ~/.bashrc
 source ~/.bash_profile
 
+function copy_dotfiles() {
+  cd "$SCRIPTPATH"
+  rsync ./.* ~/ --exclude=.git 
+}
 
 #subscripts
-installAtomPackages
-installDotFiles
-
-
-function installAtomPackages() {
-  #beautify
-  apm install atom-beautify
-  apm install pigments
-
-
-
-  #linters & co
-  apm install linter
-  apm install linter-eslint
-  apm install linter-stylelint
-
-}
-
-function installDotFiles() {
-  cd $SCRIPTPATH
-  cp ./.* ~/.
-}
+copy_dotfiles
