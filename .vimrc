@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'mxw/vim-jsx'
     Plug 'leafgarland/typescript-vim'
     Plug 'w0rp/ale'
+    Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 "enable syntax highlighting
