@@ -48,7 +48,7 @@ echo "Install Brew packages"
 ######################
 
 # oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 # spaceship theme
 curl -fsSL https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.sh | zsh
