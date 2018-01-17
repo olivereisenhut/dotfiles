@@ -1,4 +1,4 @@
-"plugs
+"plug
 call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } 
     Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'leafgarland/typescript-vim'
     Plug 'w0rp/ale'
     Plug 'editorconfig/editorconfig-vim'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "enable syntax highlighting
@@ -18,11 +20,10 @@ filetype on
 filetype indent on
 filetype plugin indent on
 
-"shows existing tab with 4 spaces width
+" Set tab width and convert tabs to spaces
 set tabstop=4
-"when indenting with '>', use 4 spaces width
+set softtabstop=4
 set shiftwidth=4
-"On pressing tab, insert 4 spaces
 set expandtab
 
 "Set line numbers
@@ -44,3 +45,11 @@ endif
 if (has("termguicolors"))
   set termguicolors
 endif
+
+" Space above/beside cursor from screen edges
+set scrolloff=0
+set sidescrolloff=0
+
+" NERDTree
+let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>
