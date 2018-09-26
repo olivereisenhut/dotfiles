@@ -51,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow zsh-autosuggestions osx docker aws yarn)
+plugins=(git git-flow osx docker jira yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,12 +62,12 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#  Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+ export EDITOR='vim'
+else
+ export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -83,6 +83,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
+alias vi="nvim"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -109,3 +111,19 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+export SDKMAN_DIR="/Users/oeisenhut/.sdkman"
+[[ -s "/Users/oeisenhut/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/oeisenhut/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$HOME/.fastlane/bin:$PATH"
+export GOPATH=$HOME/go
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+zpath="$(brew --prefix)/etc/profile.d/z.sh"
+[ -s $zpath ] && source $zpath
+
+# OPAM configuration
+. /Users/oeisenhut/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+eval "$(rbenv init -)"
+
+export LANG=en_US.UTF-8
