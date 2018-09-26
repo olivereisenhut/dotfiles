@@ -1,26 +1,40 @@
-"plug
+" ====
+"Plugs
+" ====
 call plug#begin('~/.vim/plugged')
+    " Navigation
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } 
     Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
-    Plug 'drewtempelmeyer/palenight.vim'
+
+    " Colors and Look
+    Plug 'challenger-deep-theme/vim'
     Plug 'bling/vim-airline'
+
+    " Langauge Support
+    " => JS & Frontend
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
     Plug 'leafgarland/typescript-vim'
+
+    " Code editing
     Plug 'w0rp/ale'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'tpope/vim-fugitive'
 call plug#end()
 
-"enable syntax highlighting
-syntax enable
+
+" =========
+" Indenting
+" ========= 
 
 filetype on
 filetype indent on
 filetype plugin indent on
 
-" Set tab width and convert tabs to spaces
+"==========
+" Editor config
+" =========
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -29,27 +43,50 @@ set expandtab
 "Set line numbers
 set number
 
-"colortheme
-set background=dark
-colorscheme palenight
-
-"true colors
-if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
-
-"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-if (has("termguicolors"))
+" =================
+" Themes and Colors
+" =================
+colorscheme challenger_deep
+"enable syntax highlighting
+syntax on
+" True color
+if has('nvim') || has('termguicolors')
   set termguicolors
 endif
-
-" Space above/beside cursor from screen edges
-set scrolloff=0
-set sidescrolloff=0
-
+" ========
 " NERDTree
+" ========
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
+" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
+let s:opam_share_dir = system("opam config var share")
+let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
+
+let s:opam_configuration = {}
+
+function! OpamConfOcpIndent()
+  execute "set rtp^=" . s:opam_share_dir . "/ocp-indent/vim"
+endfunction
+let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
+
+function! OpamConfOcpIndex()
+  execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
+endfunction
+let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
+
+function! OpamConfMerlin()
+  let l:dir = s:opam_share_dir . "/merlin/vim"
+  execute "set rtp+=" . l:dir
+endfunction
+let s:opam_configuration['merlin'] = function('OpamConfMerlin')
+
+let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
+let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
+let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
+for tool in s:opam_packages
+  " Respect package order (merlin should be after ocp-index)
+  if count(s:opam_available_tools, tool) > 0
+    call s:opam_configuration[tool]()
+  endif
+endfor
+" ## end of OPAM user-setup addition for vim / base ## keep this line
