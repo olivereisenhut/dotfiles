@@ -26,20 +26,21 @@ echo "Install Brew packages"
 
 {
   # Brew
-  brew install wget
+  brew install wget \
+               neovim
 
   # Brew Cask
   brew cask install google-chrome \
-                      firefox \
-                      spotify \
-                      iterm2 \
-                      skype \
-                      docker \
-                      docker-toolbox \
-                      sourcetree \
-                      alfred \
-                      java \
-                      spectacle
+                    firefox \
+                    spotify \
+                    iterm2 \
+                    skype \
+                    docker \
+                    docker-toolbox \
+                    sourcetree \
+                    alfred \
+                    java \
+                    spectacle
 
 }
 
