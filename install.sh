@@ -50,8 +50,8 @@ echo "Install Brew packages"
 # oh-my-zsh
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
-# spaceship theme
-curl -fsSL https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.sh | zsh
+# geometry theme
+git clone https://github.com/geometry-zsh/geometry.git $HOME/.oh-my-zsh/custom/themes/geometry
 
 ######################
 # Coding

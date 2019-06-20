@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="geometry/geometry"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow osx docker jira yarn)
+plugins=(git git-flow osx docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,18 +112,10 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-export SDKMAN_DIR="/Users/oeisenhut/.sdkman"
-[[ -s "/Users/oeisenhut/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/oeisenhut/.sdkman/bin/sdkman-init.sh"
-
-export PATH="$HOME/.fastlane/bin:$PATH"
 export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-zpath="$(brew --prefix)/etc/profile.d/z.sh"
-[ -s $zpath ] && source $zpath
-
-# OPAM configuration
-. /Users/oeisenhut/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# ruby stuff
 eval "$(rbenv init -)"
 
 export LANG=en_US.UTF-8
