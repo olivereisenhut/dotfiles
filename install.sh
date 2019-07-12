@@ -27,7 +27,8 @@ echo "Install Brew packages"
 {
   # Brew
   brew install wget \
-               neovim
+               neovim \
+               httpstat
 
   # Brew Cask
   brew cask install google-chrome \
