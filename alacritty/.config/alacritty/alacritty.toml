@@ -4,7 +4,7 @@ import = ["/Users/olivereisenhut/.config/alacritty/themes/rosepine/dist/rose-pin
 TERM = "xterm-256color"
 
 [font]
-size = 15
+size = 16
 
 [font.bold]
 family = "JetBrains Mono"
