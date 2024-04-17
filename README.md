@@ -1,5 +1,14 @@
 # dotfiles
 
+**Currently being rebuilt **
+
+## Copy dotfiles
+```bash
+cd ~/dotfiles
+stow nvim
+stow alacritty
+```
+
 ## Install
 Run the script as sudo because you need root permissions
 ### Option 1.

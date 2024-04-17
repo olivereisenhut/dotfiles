@@ -1,0 +1,11 @@
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	autocrlf = input
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[user]
+	email = oliver.eisenhut@frontify.com
+	name = Oliver Eisenhut
+	signingkey = 2A71A644478D01AA
+[commit]
+	gpgsign = true
