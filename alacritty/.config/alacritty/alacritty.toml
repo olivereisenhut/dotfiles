@@ -1,4 +1,4 @@
-import = ["/Users/olivereisenhut/.config/alacritty/themes/rosepine/dist/rose-pine-moon.toml"]
+import = ["~/.config/alacritty/themes/rosepine/rose-pine-moon.toml"]
 
 [env]
 TERM = "xterm-256color"
