@@ -5,21 +5,34 @@ cask "firefox"
 
 cask "visual-studio-code"
 cask "jetbrains-toolbox"
-cask "alacritty"
+cask "alacritty", args: { no_quarantine: true }
 cask "tableplus"
 cask "orbstack"
+cask "tunnelblick"
+cask "tuple"
 
 cask "spotify"
 cask "slack"
 cask "keka"
 cask "obsidian"
 cask "1password"
+cask "rectangle"
+cask "raycast"
 
 cask "font-jetbrains-mono"
 
+mas "Okta Verify", id: 490179405
 
-brew "tldr"
+brew "tmux"
+brew "nvim"
+brew "ripgrep"
+
+brew "gnupg"
 brew "pinentry-mac"
 brew "awscli"
+
+brew "mas"
+brew "tldr"
 brew "diff-so-fancy"
-brew "nvim"
+
+brew "stow"
