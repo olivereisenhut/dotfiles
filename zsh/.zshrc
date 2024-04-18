@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/olivereisenhut/.oh-my-zsh"
+export ZSH="/Users/oliver.eisenhut/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -76,43 +76,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Make brew work on an m1
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Frontify docker scripts
 export PATH="$PATH:$HOME/frontify/docker/bin"
-
-# Frontify
-function dcomposer() {
-docker run --rm --interactive --tty \
- --volume $PWD:/app \
-  composer "${@:1}"
-}
-
-function mpr() {
-    gh pr list --search "user-review-requested:@me"
-}
 
 #GPG
 export GPG_TTY=$(tty)
@@ -142,3 +110,4 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 # test container
 export DOCKER_HOST=unix://${HOME}/.orbstack/run/docker.sock
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+
