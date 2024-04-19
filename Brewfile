@@ -26,13 +26,17 @@ mas "Okta Verify", id: 490179405
 brew "tmux"
 brew "nvim"
 brew "ripgrep"
+brew "fzf"
 
 brew "gnupg"
 brew "pinentry-mac"
 brew "awscli"
+brew "gh"
 
 brew "mas"
 brew "tldr"
 brew "diff-so-fancy"
 
 brew "stow"
+
+brew "php"
