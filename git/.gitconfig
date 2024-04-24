@@ -9,4 +9,6 @@
 	name = Oliver Eisenhut
 	signingkey = B10BFE1346E2FD23
 [commit]
-	gpgsign = true
+    gpgsign = true
+[gpg]
+    program = /opt/homebrew/bin/gpg
