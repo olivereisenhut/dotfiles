@@ -41,3 +41,4 @@ brew "diff-so-fancy"
 brew "stow"
 
 brew "php"
+brew "composer"
