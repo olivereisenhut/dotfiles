@@ -32,6 +32,9 @@ require("formatter").setup({
 		sh = {
 			require("formatter.filetypes.sh").shfmt,
 		},
+        rust = {
+			require("formatter.filetypes.rust").rustfmt,
+        }
 	},
 })
 
