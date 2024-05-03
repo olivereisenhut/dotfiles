@@ -28,6 +28,7 @@ brew "tmux"
 brew "nvim"
 brew "ripgrep"
 brew "fzf"
+brew "stylua"
 
 brew "gnupg"
 brew "pinentry-mac"
