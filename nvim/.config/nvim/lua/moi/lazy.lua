@@ -1,21 +1,15 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+require("lazy").setup({
 
--- Only required if you have packer configured as `opt`
-vim.cmd([[packadd packer.nvim]])
-
-return require("packer").startup(function(use)
-	-- Packer can manage itself
-	use("wbthomason/packer.nvim")
-
-	use({
+	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.4",
-		-- or                            , branch = '0.1.x',
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
+		tag = "0.1.6",
+		-- or                              , branch = '0.1.x',
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 
-	use({ "rose-pine/neovim", as = "rose-pine" })
-	use({
+	{ "rose-pine/neovim", name = "rose-pine" },
+
+	{
 		"folke/zen-mode.nvim",
 		-- todo move me into own config
 		config = function()
@@ -25,25 +19,25 @@ return require("packer").startup(function(use)
 				},
 			})
 		end,
-	})
+	},
 
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-	use("mbbill/undotree")
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	"mbbill/undotree",
 
 	-- Git --
-	use("tpope/vim-fugitive")
-	use("tpope/vim-rhubarb")
+	"tpope/vim-fugitive",
+	"tpope/vim-rhubarb",
 
-	use("vim-test/vim-test")
+	"vim-test/vim-test",
 
 	-- used for autoformatting (prettier...)
-	use("mhartington/formatter.nvim")
-	use("editorconfig/editorconfig-vim")
+	"mhartington/formatter.nvim",
+	"editorconfig/editorconfig-vim",
 
-	use({
+	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v1.x",
-		requires = {
+		dependencies = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" }, -- Required
 			{ "williamboman/mason.nvim" }, -- Optional
@@ -61,20 +55,17 @@ return require("packer").startup(function(use)
 			{ "L3MON4D3/LuaSnip" }, -- Required
 			{ "rafamadriz/friendly-snippets" }, -- Optional
 		},
-	})
+	},
 
-	use({
-		"j-hui/fidget.nvim",
-		tag = "legacy",
-	})
+	"j-hui/fidget.nvim",
 
 	-- Markdown Preview
-	use({
+	{
 		"iamcco/markdown-preview.nvim",
-		run = function()
+		build = function()
 			vim.fn["mkdp#util#install"]()
 		end,
-	})
+	},
 
-	use("github/copilot.vim")
-end)
+	"github/copilot.vim",
+})
