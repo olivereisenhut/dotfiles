@@ -92,23 +92,9 @@ export GPG_TTY=$(tty)
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
 
-# Dotnet
-export PATH="$PATH:/Users/olivereisenhut/.dotnet/tools"
-
 # Aliases
 alias vi="nvim"
 alias vim="nvim"
-
-# bun completions
-[ -s "/Users/olivereisenhut/.bun/_bun" ] && source "/Users/olivereisenhut/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# use brew ruby
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # test container
 export DOCKER_HOST=unix://${HOME}/.orbstack/run/docker.sock
