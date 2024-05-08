@@ -1,8 +1,5 @@
 # dotfiles
 
-**Currently being rebuilt**
-
-
 ## Install
 
 1. Install git: `xcode-select --install`
