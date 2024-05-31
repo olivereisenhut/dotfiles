@@ -1,4 +1,5 @@
 tap "homebrew/cask-fonts"
+tap "oven-sh/bun"
 
 cask "arc"
 cask "firefox"
@@ -29,6 +30,7 @@ brew "tldr"
 brew "diff-so-fancy"
 brew "awscli"
 brew "gh"
+brew "bun"
 
 brew "nvim"
 brew "ripgrep"
