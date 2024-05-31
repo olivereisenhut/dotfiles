@@ -25,6 +25,11 @@ cask "font-jetbrains-mono"
 mas "Okta Verify", id: 490179405
 
 brew "tmux"
+brew "tldr"
+brew "diff-so-fancy"
+brew "awscli"
+brew "gh"
+
 brew "nvim"
 brew "ripgrep"
 brew "fzf"
@@ -32,13 +37,8 @@ brew "stylua"
 
 brew "gnupg"
 brew "pinentry-mac"
-brew "awscli"
-brew "gh"
 
 brew "mas"
-brew "tldr"
-brew "diff-so-fancy"
-
 brew "stow"
 
 brew "php"
