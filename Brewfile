@@ -20,6 +20,7 @@ cask "obsidian"
 cask "1password"
 cask "rectangle"
 cask "raycast"
+cask "loom"
 
 cask "font-jetbrains-mono"
 
