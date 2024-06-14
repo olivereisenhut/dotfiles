@@ -33,6 +33,8 @@ brew "awscli"
 brew "gh"
 brew "bun"
 
+brew "colima"
+
 brew "nvim"
 brew "ripgrep"
 brew "fzf"
