@@ -6,6 +6,9 @@
       },
       "oven-sh/bun": {
         "revision": "50a0b04db3cddba334a77b494ded8a243847d4fc"
+      },
+      "jesseduffield/lazydocker": {
+        "revision": "ac05d37809ecfb705d2edaf1c24b4835ec7a46dd"
       }
     },
     "cask": {
@@ -834,6 +837,10 @@
             }
           }
         }
+      },
+      "jesseduffield/lazydocker/lazydocker": {
+        "version": "0.23.3",
+        "bottle": false
       }
     },
     "mas": {

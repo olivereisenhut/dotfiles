@@ -1,5 +1,6 @@
 tap "homebrew/cask-fonts"
 tap "oven-sh/bun"
+tap "jesseduffield/lazydocker"
 
 cask "arc"
 cask "firefox"
@@ -34,6 +35,7 @@ brew "gh"
 brew "bun"
 
 brew "colima"
+brew "jesseduffield/lazydocker/lazydocker"
 
 brew "nvim"
 brew "ripgrep"
