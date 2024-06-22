@@ -96,7 +96,3 @@ PATH="$GOPATH/bin:$PATH"
 alias vi="nvim"
 alias vim="nvim"
 
-# test container
-export DOCKER_HOST=unix://${HOME}/.orbstack/run/docker.sock
-export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
-
