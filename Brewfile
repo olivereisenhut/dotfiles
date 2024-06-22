@@ -25,8 +25,6 @@ cask "loom"
 
 cask "font-jetbrains-mono"
 
-mas "Okta Verify", id: 490179405
-
 brew "tmux"
 brew "tldr"
 brew "diff-so-fancy"
