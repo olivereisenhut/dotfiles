@@ -7,10 +7,4 @@
 3. Install apps/packages: `brew bundle`
 4. Install [oh-my-zsh](https://ohmyz.sh/#install).
 5. Install oh-my-zsh plugins: `bash install-oh-my-zsh-plugins.sh`
-
-## Copy dotfiles
-```bash
-cd ~/dotfiles
-stow nvim
-stow alacritty
-```
+6. Link dotfiles `bash link_dotfiles.sh`
