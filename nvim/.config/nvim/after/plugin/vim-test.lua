@@ -1,5 +1,4 @@
 vim.g["test#strategy"] = "neovim"
-vim.g["test#php#phpunit#executable"] = "app-server php ./vendor/bin/phpunit"
 
 vim.keymap.set("n", "<leader>tn", "<cmd>TestNearest<CR>", { noremap = true, silent = true }) -- Test nearest test
 vim.keymap.set("n", "<leader>tf", "<cmd>TestFile<CR>", { noremap = true, silent = true }) -- Test file
