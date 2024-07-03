@@ -14,6 +14,8 @@ cask "tunnelblick"
 cask "tuple"
 cask "insomnia"
 
+mas "Xcode", id: 497799835
+
 cask "spotify"
 cask "slack"
 cask "keka"
