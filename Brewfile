@@ -15,6 +15,7 @@ cask "tuple"
 cask "insomnia"
 
 mas "Xcode", id: 497799835
+mas "Telegram", id: 747648890
 
 cask "spotify"
 cask "slack"
