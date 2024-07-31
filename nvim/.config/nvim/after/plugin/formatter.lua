@@ -5,6 +5,10 @@ require("formatter").setup({
 	logging = true,
 	log_level = vim.log.levels.WARN,
 	filetype = {
+		go = {
+			require("formatter.filetypes.go").gofmt,
+			require("formatter.filetypes.go").goimports,
+		},
 		javascript = {
 			require("formatter.filetypes.javascript").prettier,
 		},
@@ -32,9 +36,9 @@ require("formatter").setup({
 		sh = {
 			require("formatter.filetypes.sh").shfmt,
 		},
-        rust = {
+		rust = {
 			require("formatter.filetypes.rust").rustfmt,
-        }
+		},
 	},
 })
 

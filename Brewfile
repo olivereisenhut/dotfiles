@@ -48,4 +48,5 @@ brew "mas"
 brew "stow"
 
 brew "php"
+brew "golang"
 brew "composer"
