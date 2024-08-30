@@ -49,4 +49,5 @@ brew "stow"
 
 brew "php"
 brew "golang"
+brew "elixir"
 brew "composer"
