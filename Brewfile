@@ -31,6 +31,8 @@ brew "jq"
 brew "awscli"
 brew "gh"
 brew "bun"
+brew "hey"
+brew "k6"
 
 brew "colima"
 brew "jesseduffield/lazydocker/lazydocker"
