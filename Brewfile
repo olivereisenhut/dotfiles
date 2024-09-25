@@ -12,7 +12,6 @@ cask "tableplus"
 cask "orbstack"
 cask "tunnelblick"
 cask "tuple"
-cask "insomnia"
 
 cask "spotify"
 cask "slack"
