@@ -23,6 +23,7 @@ cask "raycast"
 cask "loom"
 
 cask "font-jetbrains-mono"
+cask "font-departure-mono"
 
 brew "tmux"
 brew "tldr"

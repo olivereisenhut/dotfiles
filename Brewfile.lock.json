@@ -61,7 +61,7 @@
         }
       },
       "spotify": {
-        "version": "1.2.45.454",
+        "version": "1.2.47.364",
         "options": {
           "full_name": "spotify"
         }
@@ -136,6 +136,12 @@
         "version": "2.6.1",
         "options": {
           "full_name": "firecamp"
+        }
+      },
+      "font-departure-mono": {
+        "version": "1.350",
+        "options": {
+          "full_name": "font-departure-mono"
         }
       }
     },
@@ -234,7 +240,7 @@
         }
       },
       "awscli": {
-        "version": "2.17.48",
+        "version": "2.17.58",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -689,7 +695,7 @@
         }
       },
       "gh": {
-        "version": "2.56.0",
+        "version": "2.57.0",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -1048,7 +1054,7 @@
         }
       },
       "elixir": {
-        "version": "1.17.2",
+        "version": "1.17.3",
         "bottle": {
           "rebuild": 1,
           "root_url": "https://ghcr.io/v2/homebrew/core",
