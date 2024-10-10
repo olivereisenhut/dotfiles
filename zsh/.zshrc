@@ -33,3 +33,6 @@ PATH="$GOPATH/bin:$PATH"
 alias vi="nvim"
 alias vim="nvim"
 
+
+# roc
+export PATH=$PATH:~/learning/roc/roc_nightly-macos_apple_silicon-2024-09-26-8c737868aa
