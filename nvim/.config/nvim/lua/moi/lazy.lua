@@ -9,18 +9,6 @@ require("lazy").setup({
 
 	{ "rose-pine/neovim", name = "rose-pine" },
 
-	{
-		"folke/zen-mode.nvim",
-		-- todo move me into own config
-		config = function()
-			require("zen-mode").setup({
-				{
-					width = 240,
-				},
-			})
-		end,
-	},
-
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	"mbbill/undotree",
 
