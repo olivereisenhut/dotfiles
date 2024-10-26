@@ -9,19 +9,23 @@ require("lazy").setup({
 
 	{ "rose-pine/neovim", name = "rose-pine" },
 
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	"mbbill/undotree",
 
-	-- Git --
+    'stevearc/oil.nvim',
+	"mbbill/undotree",
+	"vim-test/vim-test",
+
+	-- git
 	"tpope/vim-fugitive",
 	"tpope/vim-rhubarb",
-
-	"vim-test/vim-test",
 
 	-- used for autoformatting (prettier...)
 	"mhartington/formatter.nvim",
 	"editorconfig/editorconfig-vim",
 
+	-- syntax highlighting
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+
+	-- lsp
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -42,10 +46,9 @@ require("lazy").setup({
 			{ "rafamadriz/friendly-snippets" },
 		},
 	},
-
 	"j-hui/fidget.nvim",
 
-	-- Markdown Preview
+	-- markdown preview
 	{
 		"iamcco/markdown-preview.nvim",
 		build = function()
