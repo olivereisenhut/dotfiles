@@ -1,1 +1,6 @@
 set number relativenumber
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap j jzz
+nnoremap k kzz
