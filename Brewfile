@@ -8,6 +8,7 @@ cask "firefox"
 cask "visual-studio-code"
 cask "jetbrains-toolbox"
 cask "alacritty", args: { no_quarantine: true }
+cask "wezterm"
 cask "tableplus"
 cask "orbstack"
 cask "tunnelblick"
