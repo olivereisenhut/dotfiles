@@ -3,23 +3,23 @@
 TERM = "xterm-256color"
 
 [font]
-size = 16
+size = 17
 
 [font.bold]
-family = "JetBrains Mono"
+family = "IBM Plex Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrains Mono"
+family = "IBM Plex Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrains Mono"
+family = "IBM Plex Mono"
 style = "Italic"
 
 [font.normal]
-family = "JetBrains Mono"
-style = "Light"
+family = "IBM Plex Mono"
+style = "Regular"
 
 [[keyboard.bindings]]
 chars = "\u001Bs"

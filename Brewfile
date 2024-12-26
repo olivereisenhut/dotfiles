@@ -25,6 +25,7 @@ cask "loom"
 
 cask "font-jetbrains-mono"
 cask "font-departure-mono"
+cask "font-ibm-plex-mono"
 
 brew "tmux"
 brew "tldr"
