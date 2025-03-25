@@ -53,6 +53,8 @@ brew "pinentry-mac"
 brew "mas"
 brew "stow"
 
+brew "python"
+brew "python-setuptools" # Needed for install gyp things
 brew "php"
 brew "golang"
 brew "elixir"
