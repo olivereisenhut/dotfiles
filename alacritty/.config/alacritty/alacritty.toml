@@ -53,4 +53,4 @@ x = 10
 y = 10
 
 [general]
-import = ["~/.config/alacritty/themes/rosepine/rose-pine.toml"]
+import = ["~/.config/alacritty/themes/tokyonight/tokyonight_night.toml"]

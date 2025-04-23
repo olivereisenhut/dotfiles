@@ -7,10 +7,12 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	{ "rose-pine/neovim", name = "rose-pine" },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+	},
 
-
-    'stevearc/oil.nvim',
+	"stevearc/oil.nvim",
 	"mbbill/undotree",
 	"vim-test/vim-test",
 
