@@ -58,4 +58,5 @@ brew "python-setuptools" # Needed for install gyp things
 brew "php"
 brew "golang"
 brew "elixir"
+brew "zig"
 brew "composer"
