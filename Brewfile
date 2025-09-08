@@ -30,6 +30,7 @@ cask "font-ibm-plex-mono"
 
 brew "tmux"
 brew "tldr"
+brew "tree"
 brew "diff-so-fancy"
 brew "jq"
 brew "awscli"
