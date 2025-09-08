@@ -6,7 +6,7 @@ tap "withgraphite/tap"
 cask "arc"
 cask "firefox"
 
-cask "visual-studio-code"
+cask "zed"
 cask "jetbrains-toolbox"
 cask "alacritty", args: { no_quarantine: true }
 cask "ghostty"
