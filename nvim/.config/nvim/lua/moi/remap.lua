@@ -16,3 +16,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "j", "jzz")
 vim.keymap.set("n", "k", "kzz")
+
+vim.keymap.set("n", "<leader>cfp", function()
+	vim.fn.setreg("*", vim.fn.expand("%"))
+end, { desc = "Copy the relative file path to system clipboard" })
