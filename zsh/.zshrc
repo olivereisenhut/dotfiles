@@ -35,4 +35,6 @@ fi
 alias vi="nvim"
 alias vim="nvim"
 
+# docker once again
+export DOCKER_HOST=unix://$HOME/.orbstack/run/docker.sock
 
