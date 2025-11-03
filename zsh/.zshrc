@@ -19,9 +19,6 @@ source $ZSH/oh-my-zsh.sh
 # Make brew work on an m1
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Frontify docker scripts
-export PATH="$PATH:$HOME/frontify/docker/bin"
-
 #GPG
 export GPG_TTY=$(tty)
 
@@ -29,10 +26,13 @@ export GPG_TTY=$(tty)
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
 
+# Load local aliases
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
 # Aliases
 alias vi="nvim"
 alias vim="nvim"
 
 
-# roc
-export PATH=$PATH:~/learning/roc/roc_nightly-macos_apple_silicon-2024-09-26-8c737868aa
