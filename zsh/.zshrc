@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="geometry/geometry"
+#ZSH_THEME="geometry/geometry"
 
 plugins=(git zsh-nvm)
 
@@ -38,3 +38,5 @@ alias vim="nvim"
 # docker once again
 export DOCKER_HOST=unix://$HOME/.orbstack/run/docker.sock
 
+eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"

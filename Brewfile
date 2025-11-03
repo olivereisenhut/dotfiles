@@ -29,6 +29,9 @@ cask "font-departure-mono"
 cask "font-ibm-plex-mono"
 
 brew "tmux"
+brew "starship"
+brew "direnv"
+
 brew "tldr"
 brew "tree"
 brew "diff-so-fancy"
