@@ -62,6 +62,7 @@ brew "python"
 brew "python-setuptools" # Needed for install gyp things
 brew "php"
 brew "composer"
+brew "dotnet"
 brew "golang"
 brew "elixir"
 brew "gleam"
