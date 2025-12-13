@@ -39,6 +39,9 @@ require("formatter").setup({
 		rust = {
 			require("formatter.filetypes.rust").rustfmt,
 		},
+		elixir = {
+			require("formatter.filetypes.elixir").mixformat,
+		},
 	},
 })
 
