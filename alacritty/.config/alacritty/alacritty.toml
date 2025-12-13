@@ -21,32 +21,13 @@ style = "Italic"
 family = "IBM Plex Mono"
 style = "Regular"
 
-[[keyboard.bindings]]
-chars = "\u001Bs"
-key = "S"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001BS"
-key = "S"
-mods = "Alt|Shift"
-
-[[keyboard.bindings]]
-chars = "\u001B;"
-key = "Semicolon"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001B_"
-key = "Minus"
-mods = "Alt|Shift"
-
 [terminal.shell]
 args = ["--login"]
 program = "/bin/zsh"
 
 [window]
 decorations = "buttonless"
+option_as_alt = "Both"
 
 [window.padding]
 x = 10
