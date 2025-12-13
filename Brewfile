@@ -15,6 +15,8 @@ cask "orbstack"
 cask "tunnelblick"
 cask "tuple"
 
+cask "claude-code"
+
 cask "spotify"
 cask "slack"
 cask "keka"
