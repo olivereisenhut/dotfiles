@@ -8,7 +8,6 @@ cask "firefox"
 
 cask "zed"
 cask "jetbrains-toolbox"
-cask "alacritty", args: { no_quarantine: true }
 cask "ghostty"
 cask "tableplus"
 cask "orbstack"
