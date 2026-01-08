@@ -1,3 +1,6 @@
+zstyle ':omz:update' frequency 7
+zstyle ':omz:update' mode auto
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
