@@ -1,5 +1,6 @@
 require("lazy").setup({
 
+	-- searching
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.6",
@@ -7,9 +8,16 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
+	-- the looks
+	{ "kepano/flexoki-neovim", name = "flexoki" },
+	-- Lua
 	{
-		"folke/tokyonight.nvim",
-		lazy = false,
+		"folke/zen-mode.nvim",
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
 	},
 
 	"stevearc/oil.nvim",
