@@ -15,6 +15,7 @@ cask "tunnelblick"
 cask "tuple"
 
 cask "claude-code"
+cask "codex"
 
 cask "spotify"
 cask "slack"
