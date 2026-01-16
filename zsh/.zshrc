@@ -29,6 +29,10 @@ export GPG_TTY=$(tty)
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
 
+# bun
+export PATH="$HOME/.bun/bin:$PATH"
+
+
 # Load local aliases
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
