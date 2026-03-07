@@ -62,10 +62,6 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
-vim.lsp.config("expert", {
-	cmd = { "expert", "--stdio" },
-})
-
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
