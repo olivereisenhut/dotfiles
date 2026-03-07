@@ -3,6 +3,7 @@ tap "oven-sh/bun"
 tap "jesseduffield/lazydocker"
 tap "withgraphite/tap"
 tap "charmbracelet/tap"
+tap "hashicorp/tap"
 
 cask "arc"
 cask "firefox"
@@ -38,7 +39,10 @@ brew "tldr"
 brew "tree"
 brew "diff-so-fancy"
 brew "jq"
+
 brew "awscli"
+brew "hashicorp/tap/terraform"
+
 brew "gh"
 brew "graphite"
 brew "hey"
