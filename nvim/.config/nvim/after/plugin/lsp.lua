@@ -36,9 +36,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("mason").setup({})
-require("mason-lspconfig").setup({
-	ensure_installed = { "ts_ls", "rust_analyzer" },
-})
+require("mason-lspconfig").setup({})
 
 vim.lsp.config("*", {
 	capabilities = lsp_capabilities,
@@ -57,6 +55,16 @@ vim.lsp.config("lua_ls", {
 				library = {
 					vim.env.VIMRUNTIME,
 				},
+			},
+		},
+	},
+})
+
+vim.lsp.config("vtsls", {
+	settings = {
+		typescript = {
+			tsserver = {
+				maxTsServerMemory = 8192,
 			},
 		},
 	},
