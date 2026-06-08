@@ -1,6 +1,18 @@
 local defaults = require("formatter.defaults")
 local util = require("formatter.util")
 
+local oxfmt = function()
+	return {
+		exe = "oxfmt",
+		args = {
+			"--stdin-filepath",
+			util.escape_path(util.get_current_buffer_file_path()),
+		},
+		stdin = true,
+		try_node_modules = true,
+	}
+end
+
 require("formatter").setup({
 	logging = true,
 	log_level = vim.log.levels.WARN,
@@ -10,13 +22,13 @@ require("formatter").setup({
 			require("formatter.filetypes.go").goimports,
 		},
 		javascript = {
-			require("formatter.filetypes.javascript").prettier,
+			oxfmt,
 		},
 		typescript = {
-			require("formatter.filetypes.typescript").prettier,
+			oxfmt,
 		},
 		typescriptreact = {
-			require("formatter.filetypes.typescriptreact").prettier,
+			oxfmt,
 		},
 		php = {
 			util.copyf(defaults.prettier),
@@ -28,7 +40,13 @@ require("formatter").setup({
 			require("formatter.filetypes.yaml").prettier,
 		},
 		json = {
-			require("formatter.filetypes.json").prettier,
+			oxfmt,
+		},
+		graphql = {
+			oxfmt,
+		},
+		sql = {
+			util.copyf(defaults.prettier),
 		},
 		lua = {
 			require("formatter.filetypes.lua").stylua,
