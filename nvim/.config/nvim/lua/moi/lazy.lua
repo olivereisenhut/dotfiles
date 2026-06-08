@@ -76,6 +76,4 @@ require("lazy").setup({
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
-
-	"github/copilot.vim",
 })
