@@ -34,6 +34,7 @@ cask "font-ibm-plex-mono"
 brew "tmux"
 brew "direnv"
 
+brew "wget"
 brew "tldr"
 brew "tree"
 brew "diff-so-fancy"
