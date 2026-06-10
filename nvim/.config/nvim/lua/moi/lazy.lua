@@ -68,12 +68,4 @@ require("lazy").setup({
 		lazy = false,
 		opts = {},
 	},
-
-	-- markdown preview
-	{
-		"iamcco/markdown-preview.nvim",
-		build = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	},
 })
