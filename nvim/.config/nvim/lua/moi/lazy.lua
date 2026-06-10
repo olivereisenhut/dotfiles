@@ -29,7 +29,7 @@ require("lazy").setup({
 	"tpope/vim-rhubarb",
 
 	-- used for autoformatting (prettier...)
-	"mhartington/formatter.nvim",
+	"stevearc/conform.nvim",
 	"editorconfig/editorconfig-vim",
 
 	-- syntax highlighting

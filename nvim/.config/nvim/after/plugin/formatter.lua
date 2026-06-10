@@ -1,72 +1,23 @@
-local defaults = require("formatter.defaults")
-local util = require("formatter.util")
-
-local oxfmt = function()
-	return {
-		exe = "oxfmt",
-		args = {
-			"--stdin-filepath",
-			util.escape_path(util.get_current_buffer_file_path()),
-		},
-		stdin = true,
-		try_node_modules = true,
-	}
-end
-
-require("formatter").setup({
-	logging = true,
-	log_level = vim.log.levels.WARN,
-	filetype = {
-		go = {
-			require("formatter.filetypes.go").gofmt,
-			require("formatter.filetypes.go").goimports,
-		},
-		javascript = {
-			oxfmt,
-		},
-		typescript = {
-			oxfmt,
-		},
-		typescriptreact = {
-			oxfmt,
-		},
-		php = {
-			util.copyf(defaults.prettier),
-		},
-		yaml = {
-			require("formatter.filetypes.yaml").prettier,
-		},
-		yml = {
-			require("formatter.filetypes.yaml").prettier,
-		},
-		json = {
-			oxfmt,
-		},
-		graphql = {
-			oxfmt,
-		},
-		sql = {
-			util.copyf(defaults.prettier),
-		},
-		lua = {
-			require("formatter.filetypes.lua").stylua,
-		},
-		sh = {
-			require("formatter.filetypes.sh").shfmt,
-		},
-		rust = {
-			require("formatter.filetypes.rust").rustfmt,
-		},
-		elixir = {
-			require("formatter.filetypes.elixir").mixformat,
-		},
+require("conform").setup({
+	format_on_save = {
+		-- These options will be passed to conform.format()
+		timeout_ms = 500,
+		lsp_format = "prefer",
 	},
-})
-
-local augroup = vim.api.nvim_create_augroup
-local autocmd = vim.api.nvim_create_autocmd
-augroup("__formatter__", { clear = true })
-autocmd("BufWritePost", {
-	group = "__formatter__",
-	command = ":FormatWrite",
+	formatters_by_ft = {
+		go = { "gofmt", "goimports" },
+		javascript = { "prettier", "eslint_d" },
+		typescript = { "prettier", "eslint_d" },
+		typescriptreact = { "prettier", "eslint_d" },
+		php = { "prettier" },
+		yaml = { "prettier" },
+		yml = { "prettier" },
+		json = { "prettier" },
+		graphql = { "prettier" },
+		sql = { "prettier" },
+		lua = { "stylua" },
+		sh = { "shfmt" },
+		rust = { "rustfmt" },
+		elixir = { "mixformat" },
+	},
 })
