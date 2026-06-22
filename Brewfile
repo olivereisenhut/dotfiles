@@ -1,7 +1,5 @@
 tap "oven-sh/bun"
 tap "jesseduffield/lazydocker"
-tap "withgraphite/tap"
-tap "charmbracelet/tap"
 tap "hashicorp/tap"
 
 cask "arc"
@@ -44,11 +42,9 @@ brew "awscli"
 brew "hashicorp/tap/terraform"
 
 brew "gh"
-brew "graphite"
 brew "hey"
 brew "k6"
 brew "watchexec"
-brew "charmbracelet/tap/skate"
 
 brew "colima"
 brew "jesseduffield/lazydocker/lazydocker"
