@@ -50,6 +50,7 @@ brew "colima"
 brew "jesseduffield/lazydocker/lazydocker"
 
 brew "nvim"
+brew "tree-sitter-cli" # Needed by nvim-treesitter (main branch) to build parsers
 brew "ripgrep"
 brew "fzf"
 brew "stylua"
