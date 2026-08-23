@@ -30,6 +30,7 @@ cask "font-departure-mono"
 cask "font-ibm-plex-mono"
 
 brew "tmux"
+brew "herdr"
 brew "direnv"
 
 brew "wget"
