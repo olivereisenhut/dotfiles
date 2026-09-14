@@ -13,7 +13,7 @@ cask "orbstack"
 cask "tunnelblick"
 cask "tuple"
 
-cask "claude-code"
+cask "claude-code@latest"
 cask "codex"
 
 cask "spotify"
