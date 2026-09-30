@@ -63,6 +63,7 @@ brew "mas"
 brew "stow"
 
 brew "bun"
+brew "pnpm"
 brew "python"
 brew "python-setuptools" # Needed for install gyp things
 brew "php"
